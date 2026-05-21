@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - include:
+      file: classpath:db/changelog/sql/001-init.sql
+  - include:
+      file: classpath:db/changelog/sql/002-create-indices-subscriptins-table.sql
+  - include:
+      file: classpath:db/changelog/sql/003-create-history-table.sql
+  - include:
+      file: classpath:db/changelog/sql/004-add-changed-by-info-to-history.sql
+  - include:
+      file: classpath:db/changelog/sql/005-add-version-to-subscriptions.sql
+  - include:
+      file: classpath:db/changelog/sql/006-create-notifications-table.sql

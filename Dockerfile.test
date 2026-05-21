@@ -1,0 +1,9 @@
+FROM gradle:8.5-jdk21
+
+WORKDIR /app
+
+# Копируем всё (проще, но немного медленнее при пересборке)
+COPY . .
+
+# Запускаем тесты
+ENTRYPOINT ["./gradlew", "test", "--no-daemon", "--info", "--stacktrace"]
